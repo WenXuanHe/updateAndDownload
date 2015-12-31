@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% photos.forEach(function(photo){ %>
+        <h2><%=photo.name%></h2>
+        <!--用范式路由跳转到本页，下载 用id作为判断标示-->
+        <a href = "/photo/<%=photo.id%>/download">
+             <img src = '<%=photo.path%>' width="500"/>
+        </a>
+    <% }) %>
+    <a href="/photo" class="fs16">上传图片</a>
+    <script type="text/javascript" src="/javascripts/jquery-1.7.2.min.js"></script>
+  </body>
+</html>

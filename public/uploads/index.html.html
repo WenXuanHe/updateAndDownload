@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Cool Navigation Menu Demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+*{margin:0px;padding:0px;}
+body{
+background:#202020;
+}
+#containter ul li{
+	float:left;
+	border-right:1px solid #707070;
+	border-top:1px solid #707070;
+	border-bottom:1px solid #707070;
+	padding-left:86px;
+	padding-right:81px;
+	height:53px;
+	line-height:53px;
+	list-style-type:none;
+	margin-right:9px;
+	border-left: 5px solid #707070;
+	border-radius: 0px 8px 8px 0px;
+	box-shadow: 1px 0px 2px #CCC;
+	background:url(images/light.png) repeat -100px 0;
+}
+#containter ul{
+background:#303030;
+height:53px;
+}
+#containter ul li a{
+text-decoration:none;
+color:#AAA;
+
+font-weight:bold;
+font-size:16px;
+}
+</style>
+<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script> 
+<script type="text/javascript" src="js/animateBackground-plugin.js"></script>
+<script type="text/javascript" >
+$(function(){
+	$("#containter li").css({backgroundPosition:'0 0'})
+	.mouseover(function(){
+		$(this).stop().animate({backgroundPosition:"(-280px 0px)"},
+		{duration:1000})
+	}).mouseout(function(){
+		$(this).stop().animate({backgroundPosition:"(0px 0px)"},
+		{duration:1000})
+	})
+	
+})
+</script>
+</head>
+<body>
+<div id = "containter">
+	<ul>
+		<li><a href = "javascript:void(0);">Home</a></li>
+		<li><a href = "javascript:void(0);">Portofolio</a></li>
+		<li><a href = "javascript:void(0);">Customer</a></li>
+		<li><a href = "javascript:void(0);">About</a></li>
+		<li><a href = "javascript:void(0);">Contact</a></li>
+	</ul><br/><br/>
+	<ul>
+		<li><a href = "javascript:void(0);">Home</a></li>
+		<li><a href = "javascript:void(0);">Portofolio</a></li>
+		<li><a href = "javascript:void(0);">Customer</a></li>
+		<li><a href = "javascript:void(0);">About</a></li>
+		<li><a href = "javascript:void(0);">Contact</a></li>
+	</ul><br/><br/>
+	<ul>
+		<li><a href = "javascript:void(0);">Home</a></li>
+		<li><a href = "javascript:void(0);">Portofolio</a></li>
+		<li><a href = "javascript:void(0);">Customer</a></li>
+		<li><a href = "javascript:void(0);">About</a></li>
+		<li><a href = "javascript:void(0);">Contact</a></li>
+	</ul><br/><br/>
+</div>
+
+</body>
+</html>

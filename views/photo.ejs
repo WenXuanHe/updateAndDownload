@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% if (!isImage){ %>
+      <h1><%= title %></h1>
+      <form method='post' enctype="multipart/form-data" action="/upload"> 
+        <p><input type="text" name="photo[name]" placeholder="Name"/></p>
+        <p><input type="file" name="photo[file]"/></p>
+        <p><input type="submit" value="upload"/>
+      </form>
+     <% }else { %>
+      <h1><%= title %></h1>
+     <% } %>
+    <script type="text/javascript" src="/javascripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/javascripts/photo/upload.js"></script>
+  </body>
+</html>
